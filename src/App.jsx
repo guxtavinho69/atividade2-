@@ -1,43 +1,21 @@
-import { useState } from 'react'
-import logo from './logo.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+  const palavras_chave = ["linux", "docker", "server", "rails", "douane", "my-developments",
+"command-line", "ruby", "c-2", "linux-on-mac", "maintenance", "security", "gnome", "kubernetes",
+"mes-developpements", "ubuntu", "python", "vcs", "capybara", "contribution", "git", "apt",
+"bazaar", "chef", "cucumber", "debian", "game", "howto", "packaging", "testing", "boost", "debug",
+"devise", "elixir", "gtk", "homebrew", "information", "ssh", "tuxtremsplit", "xpath"]
+  const componentes = palavras_chave.map(
+    (componentes)=> 
+    <p className='itens'>
+      {componentes}
+    </p>
+    
+  )
+  return(
+    <div className='componente' >
+      {componentes}
     </div>
   )
 }
